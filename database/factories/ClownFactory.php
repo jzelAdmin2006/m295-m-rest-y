@@ -17,7 +17,12 @@ class ClownFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => $this->faker->name(),
+            'email' => $this->faker->unique()->safeEmail(),
+            'description' => $this->faker->text(),
+            'rating' => $this->faker->numberBetween(1, 5),
+            'created_at' => $this->faker->dateTime(),
+            'updated_at' => $this->faker->dateTime(),
         ];
     }
 }
