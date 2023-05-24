@@ -19,4 +19,19 @@ class ClownController extends Controller
         $clown->save();
         return $clown;
     }
+
+    public function update(Request $request, $id)
+    {
+        $clown = Clown::find($id);
+        $clown->fill($request->all());
+        $clown->save();
+        return $clown;
+    }
+
+    public function delete($id)
+    {
+        $clown = Clown::find($id);
+        $clown->delete();
+        return $clown;
+    }
 }
