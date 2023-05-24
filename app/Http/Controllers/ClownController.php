@@ -30,7 +30,7 @@ class ClownController extends Controller
 
     public function delete($id)
     {
-        $clown = Clown::find($id);
+        $clown = Clown::findOrfail($id);
         $clown->delete();
         return $clown;
     }
