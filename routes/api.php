@@ -21,4 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => '/k-rest-y'], function () {
     Route::get('/clowns', [ClownController::class, 'findAll']);
+    Route::post('/clowns', [ClownController::class, 'create']);
 });

@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Clown extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'email',
+        'description',
+        'rating',
+    ];
 }
